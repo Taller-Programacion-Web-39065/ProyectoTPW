@@ -70,7 +70,7 @@
 
 /* Tamaño fijo o controlado para la imagen */
 .img-servicio {
-    width: 250px; /* Ancho fijo para mantener uniformidad */
+    width: 300px; /* Ancho fijo para mantener uniformidad */
     height: 160px; /* Alto fijo */
     object-fit: cover; /* Evita que la imagen se deforme */
     border-radius: 6px;
