@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accounts</title>
+    <title>Acceso - Segusa Design</title>
     <link rel="stylesheet" href="Acceso.css">
 </head>
 <body>
     <header class="HeaderA">
         <a href="index.html" class="Logo">
-            <img src="logo.jpg" alt="logo">
+            <img src="logo.jpg" alt="Logo Segusa Design">
         </a>
     </header>
 
-    <!-- Crearemos nuestro formulario-->
-     <form method="get">
-        <label for="idUsuario">Usuario</label>
-        <input type="text" name="Usuario" placeholder="Ingrese su Usuario">
-        <br><br>
-        
-        <label for="idPassword">Contraseña</label>
-        <input type="password" name="Contraseña" placeholder="Contraseña">    
-        <br><br>
+    <main class="login-container">
+        <form class="login-form" method="get">
+            <h2>Iniciar Sesión</h2>
+            
+            <div class="input-group">
+                <label for="idUsuario">Usuario</label>
+                <input type="text" id="idUsuario" name="Usuario" placeholder="Ingrese su Usuario" required>
+            </div>
 
-        <button type="submit">
-            Ingresar
-        </button>
+            <div class="input-group">
+                <label for="idPassword">Contraseña</label>
+                <input type="password" id="idPassword" name="Contraseña" placeholder="Ingrese su contraseña" required>    
+                <a href="recuperar.html" class="forgot-password">Forgot Password?</a>
+            </div>
 
-        <br><br>
-        <div class="rv">
-            <a href="Registrarte.html">Crear una cuenta nueva</a> <br>
-            <a href="index.html">Volver al inicio</a>
-        </div>
-        
-     </form>
+            <button type="submit" class="btn-ingresar">
+                Ingresar
+            </button>
 
-    
-    
+            <div class="rv">
+                <a href="Registrarte.html">Crear una cuenta nueva</a>
+                <a href="index.html">Volver al inicio</a>
+            </div>
+        </form>
+    </main>
 </body>
 </html>

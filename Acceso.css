@@ -1,81 +1,139 @@
-body{
-    background-color:#8A9A5B;
-    color: black;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.HeaderA{
+
+body {
+    background-color: #8A9A5B;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.HeaderA {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
-    /*background-color:#808000 ; */
+    padding: 15px 5%;
 }
 
-.Logo img{
-    width: 80px;
-    height: 80px;
+.Logo img {
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    object-fit: cover; /*evita que estire la img*/
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
 }
 
-/*Damos estilos al nuestro formulario*/
-form{
-    background-color: rgb(255, 255, 255, 0.95);
-    margin: 50px auto;
-    padding: 50px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 450px; 
-    box-sizing: border-box;
-    display: grid; /*le da un toque mas condigurado*/
-    /*grid-template-columns: 120px 1fr; */
-    gap: 10px; 
-    align-items: center;
-    
-    
+.Logo img:hover {
+    transform: scale(1.05);
 }
 
-input[type="text"], input[type="password"]{
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-input:focus{
-    border-color: red;
-    outline: none;
-
-}
-
-body > a {
-    color: white; /* Blancos para que resalten sobre el fondo verde oliva */
-    text-decoration: none;
-    font-size: 15px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-body > a:hover {
-    text-decoration: underline; /* Se subraya al pasar el mouse */
-}
-
-/*veri*/
-.rv{
+.login-container {
     display: flex;
-    justify-content: space-between; /* Uno a la izquierda y otro a la derecha */
-    margin-top: 25px;               /* Los separa un poco del botón */
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.login-form {
+    background-color: rgb(255, 255, 255, 0.96);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form h2 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #4a5568;
+}
+
+.login-form input[type="text"], 
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form input:focus {
+    border-color: #8A9A5B;
+    box-shadow: 0 0 0 3px rgba(138, 154, 91, 0.2);
+    outline: none;
+}
+
+.input-group .forgot-password {
+    align-self: flex-end;
+    font-size: 0.85rem;
+    color: #65743b;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+.input-group .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn-ingresar {
+    background-color: #8A9A5B;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-ingresar:hover {
+    background-color: #73814a;
+    transform: translateY(-2px);
+}
+
+.rv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
 }
 
 .rv a {
-    color: #808000;
+    color: #65743b;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: bold;
-    
 }
 
 .rv a:hover {
-    text-decoration: underline; /* Se subraya al pasar el cursor */
+    text-decoration: underline;
+    color: #8A9A5B;
 }
