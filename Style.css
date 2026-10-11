@@ -78,6 +78,7 @@ main{
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     margin-bottom: 60px;
     margin-top: 80px;
+    animation: aparecer 1s ease-out;
 }
 
 /* El título principal (H1) */
