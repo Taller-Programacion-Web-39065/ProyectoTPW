@@ -14,7 +14,7 @@ body {
 
 /* ENCABEZADO Y MENÚ */
 header {
-    background-color: #17212e;
+    background-color: #15412a;
     padding: 18px 6%;
 }
 
@@ -26,8 +26,15 @@ header {
 }
 
 .logo {
-    width: 110px;
+    width: 120px;
     height: auto;
+    border-radius: 5px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover{
+    transform: scale(1.1);
 }
 
 nav {

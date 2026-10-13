@@ -135,15 +135,31 @@ footer{
         align-items: center;
     }
     .Header nav ul{
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        text-align: center;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+    }
+    .Header nav ul li{
+        flex: 0 0 auto;
     }
     .Header nav ul li a{
-        display: block;
-        width: 100%;
-        padding: 12px;
+        display: inline-block;
+        padding: 10px 15px;
+        width: auto;
+    }
+    /*parte de la galeria*/
+    .imagenes-galeria{
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 15px;
+        white-space: nowrap;
+        justify-content: flex-start;
+    }
+    .imagenes-galeria img{
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 250px;
     }
 }
 
