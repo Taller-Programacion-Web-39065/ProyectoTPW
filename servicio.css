@@ -1,0 +1,91 @@
+/* Quita márgenes por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra superior verde */
+.superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background-color: #15412a;
+    width: 100%;
+}
+
+.logo-img {
+    width: 130px;
+    height: auto;
+    display: block;
+}
+
+.volver-inicio {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.volver-inicio:hover {
+    color: #a3d9b1 !important;
+}
+
+/* Estilos de la sección principal */
+.contenido {
+    padding: 40px 5%;
+}
+
+.contenido h1 {
+    margin-bottom: 30px;
+    color: #0d3823;
+    text-align: center;
+}
+
+/* Columna única contenedora de los elementos */
+.lista-servicios {
+    display: flex;
+    flex-direction: column; /* Coloca cada servicio uno debajo del otro en columna */
+    gap: 30px; /* Espacio entre cada servicio */
+}
+
+/* Fila individual: Pone la imagen a la izquierda y el texto a la derecha */
+.item-servicio {
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto respecto a la imagen */
+    gap: 30px; /* Separación entre la imagen y la descripción */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.img-servicio:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    
+}
+
+/* Tamaño fijo o controlado para la imagen */
+.img-servicio {
+    width: 300px; /* Ancho fijo para mantener uniformidad */
+    height: 200px; /* Alto fijo */
+    object-fit: cover; /* Evita que la imagen se deforme */
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilos para el bloque de texto de la derecha */
+.texto-servicio h2 {
+    color: #0d3823;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.texto-servicio p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}

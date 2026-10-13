@@ -11,20 +11,46 @@ body{
 /* Estilos para el header*/
 .Header{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background-color: #15412a; /*Color aproximado al verde del logo*/
+    color: white;
 }
 .Logo img{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover; /*evita que estire la img*/
+    width: 165px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
+
+.Logo img:hover{
+    transform: scale(1.1);
+}
+
 .Header nav ul{
     display: flex;
+    width: 100%;
+    flex-direction: row;
     list-style: none;
-    gap: 20px;  
+    gap: 10px;  
+    margin: 0;
+    padding: 0;
+}
+
+.Header nav ul li a{ /* Estilos para la lista y cada boton de esta */
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3 ease;
+}
+
+/*Hover para cada boton de la lista*/
+.Header nav ul li a:hover{ 
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .Header a{
@@ -35,32 +61,47 @@ body{
 /* Estilos para el main*/
 main{
     display: flex;
-    justify-content: center; 
+    flex-direction: column;
+    justify-content: flex-start; 
     align-items: center;    
     min-height: 70vh;        
     padding: 40px 20px; 
 }
 
-.Memsaje {
+.Mensaje {
+    font-size: 1rem;
     max-width: 800px;       
     text-align: center;     
     background-color: #ffffff; 
-    padding: 40px;           
+    padding: 20px;           
     border-radius: 10px;     
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);  
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 60px;
+    margin-top: 80px;
+    animation: aparecer 1s ease-out;
+}
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+}
 }
 
 /* El título principal (H1) */
-.Memsaje h1 {
+.Mensaje h1 {
     color: #1a1a1a;          
-    font-size: 2.5rem;       
+    font-size: 1.8rem;       
     margin-bottom: 20px;     
 }
 
 /* El párrafo */
-.Memsaje p {
-    font-size: 1.15rem;      
-    line-height: 1.8;        
+.Mensaje p {
+    font-size: 1rem;      
+    line-height: 1.5;        
     color: #555555;          
     margin: 0;
 }
@@ -79,9 +120,89 @@ footer{
     margin-top: 15px;
     font-display: flex;
     justify-content: center;
-    gap: 20px; /*deja un espacion entre los iconos*/
+    gap: 10px; /*deja un espacion entre los iconos*/
+    flex-direction: column;
 }
 .Redes img{
     width: 40px;
     height: 40px;
+}
+
+/*cambio para responsive a pantallas pequeñas (celulares)*/
+@media (max-width: 768px){
+    .Header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .Header nav ul{
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+    }
+    .Header nav ul li{
+        flex: 0 0 auto;
+    }
+    .Header nav ul li a{
+        display: inline-block;
+        padding: 10px 15px;
+        width: auto;
+    }
+    /*parte de la galeria*/
+    .imagenes-galeria{
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 15px;
+        white-space: nowrap;
+        justify-content: flex-start;
+    }
+    .imagenes-galeria img{
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 250px;
+    }
+}
+
+/*Parte de la "galeria" en inicio*/
+.inicio-galeria{
+    width: 95%;
+    margin: 0 auto 60px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.inicio-galeria h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #15412a;
+}
+.imagenes-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+.imagenes-galeria img{
+    flex: 1 1 300px;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.imagenes-galeria img:hover{
+    transform: scale(1.05);
+}
+/*Parte para celulares de la "galeria" inicio*/
+@media (max-width: 768px){
+    .imagenes-galeria{
+        /*Para que se vea en vertical la pagina en celulares*/
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagenes-galeria img{
+        width: 90%;
+    }
 }

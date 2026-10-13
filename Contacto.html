@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Segusa Design</title>
+    <link rel="stylesheet" href="Contacto.css">
+</head>
+<body>
+
+<header>
+    <div class="encabezado">
+        <a href="index.html">
+            <img src="LogoRecortado.jpg" alt="Segusa Design" class="logo">
+        </a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicio.html">Servicios</a>
+            <a href="Galería.html">Galería</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="Acceso.html">Acceso</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="contacto">
+        <h1>Contáctanos</h1>
+        <p>En Segusa Design estamos listos para ayudarte a
+        transformar tus espacios. Solicita tu cotización.</p>
+
+        <div class="contenedor">
+            <div class="informacion">
+            <h2>Información de contacto</h2>
+<p>📍 Ubicación: Lima, Perú</p>
+<p>📞 Teléfono: <a href="tel:+51944001971">+51 944 001 971</a></p>
+<p>✉️ Correo: Pendiente de confirmar</p>
+                <h3>¡Síguenos en nuestras redes!</h3>
+                
+<div class="redes">
+    <a href="https://www.facebook.com/people/Segusa-Design/61588133908589/" target="_blank">
+        <img src="facebook.png" alt="Facebook">
+    </a>
+
+    <a href="https://www.instagram.com/segusadesign/" target="_blank">
+        <img src="instagram.png" alt="Instagram">
+    </a>
+
+    <a href="https://wa.me/51944001971" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp">
+    </a>
+</div>
+
+            </div>
+
+            <form id="formulario">
+                <h2>Envíanos un mensaje</h2>
+
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre"
+                       placeholder="Ingresa tu nombre" required>
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo"
+                       placeholder="Ingresa tu correo" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono"
+                       placeholder="Ingresa tu teléfono" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" rows="5"
+                    placeholder="Escribe tu consulta" required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© Segusa Design 2026. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+document.getElementById("formulario").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const correo = document.getElementById("correo").value;
+    const telefono = document.getElementById("telefono").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const texto = `Hola, soy ${nombre}.
+Correo: ${correo}
+Teléfono: ${telefono}
+Consulta: ${mensaje}`;
+
+    // Reemplazar con el WhatsApp oficial de la empresa.
+    const numero = "51999999999";
+
+    alert("Se abrirá WhatsApp para enviar tu consulta.");
+    window.open(
+        `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`,
+        "_blank"
+    );
+});
+</script>
+
+</body>
+</html>
