@@ -32,9 +32,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, sans-serif; 
-    background-color: #f9f9f9; 
-    color: #333333; 
-}
+    background-color: var(--fondo);
+    color: var(--texto);
 
 /* Estilos para el header*/
 .Header{
@@ -42,7 +41,7 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 15px 5%;
-    background-color: #15412a; /*Color aproximado al verde del logo*/
+    background-color: var(--header); aproximado al verde del logo*/
     color: white;
 }
 .Logo img{
@@ -100,7 +99,7 @@ main{
     font-size: 1rem;
     max-width: 800px;       
     text-align: center;     
-    background-color: #ffffff; 
+    background-color: var(--tarjeta); 
     padding: 20px;           
     border-radius: 10px;     
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -121,7 +120,7 @@ main{
 
 /* El título principal (H1) */
 .Mensaje h1 {
-    color: #1a1a1a;          
+    color: var(--titulo);        
     font-size: 1.8rem;       
     margin-bottom: 20px;     
 }
@@ -130,7 +129,7 @@ main{
 .Mensaje p {
     font-size: 1rem;      
     line-height: 1.5;        
-    color: #555555;          
+    color: var(--parrafo);         
     margin: 0;
 }
 
@@ -195,7 +194,7 @@ footer{
 .inicio-galeria{
     width: 95%;
     margin: 0 auto 60px auto;
-    background-color: #ffffff;
+    background-color: var(--tarjeta);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -204,8 +203,7 @@ footer{
 .inicio-galeria h2{
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #15412a;
-}
+    color: var(--galeria-titulo);
 .imagenes-galeria{
     display: flex;
     flex-wrap: wrap;
