@@ -1,3 +1,31 @@
+/* ==========================
+   CONFIGURACIÓN DE TEMAS
+========================== */
+
+/* MODO CLARO */
+:root {
+    --fondo: #f9f9f9;
+    --texto: #333333;
+    --header: #15412a;
+    --tarjeta: #ffffff;
+    --titulo: #1a1a1a;
+    --parrafo: #555555;
+    --galeria-titulo: #15412a;
+    --sombra: rgba(0, 0, 0, 0.05);
+}
+
+/* MODO OSCURO */
+[data-theme="dark"] {
+    --fondo: #121212;
+    --texto: #e5e5e5;
+    --header: #102f20;
+    --tarjeta: #1e1e1e;
+    --titulo: #ffffff;
+    --parrafo: #cccccc;
+    --galeria-titulo: #8bc9a5;
+    --sombra: rgba(0, 0, 0, 0.3);
+}
+
 body{
     /*background-color: beige;
     color: black;*/
