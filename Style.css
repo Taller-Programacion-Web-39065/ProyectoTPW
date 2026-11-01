@@ -232,3 +232,27 @@ footer{
         width: 90%;
     }
 }
+
+/* BOTÓN PARA CAMBIAR EL TEMA */
+
+#theme-toggle {
+    background-color: #ffffff;
+    color: #15412a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #dddddd;
+}
+
+/* Botón cuando está activado el modo oscuro */
+
+[data-theme="dark"] #theme-toggle {
+    background-color: #333333;
+    color: white;
+}
