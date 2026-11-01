@@ -26,6 +26,6 @@ function actualizarIcono() {
 
     const tema = document.documentElement.getAttribute("data-theme");
 
-    botonTema.textContent = tema === "dark" ? "☀️" : "🌙";
+    botonTema.textContent = tema === "dark" ? "Modo Claro" : "Modo Oscuro";
 
 }
