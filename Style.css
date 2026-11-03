@@ -236,7 +236,7 @@ footer{
 /* BOTÓN PARA CAMBIAR EL TEMA */
 
 #theme-toggle {
-    background-color: #ffffff;
+    background-color: #red;
     color: #15412a;
     border: none;
     padding: 10px 30px;
