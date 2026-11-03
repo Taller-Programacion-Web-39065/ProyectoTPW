@@ -53,11 +53,35 @@
         </form>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
-
 <script>
-  document.querySelector(".login-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+  emailjs.init({
+    publicKey: "TOWhoG3cmnGv3DHRO"
   });
+
+  document.querySelector(".login-form")
+    .addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("idEmail").value;
+      const nombre = document.getElementById("idNombre").value;
+      const apellido = document.getElementById("idApellido").value;
+
+      try {
+        await emailjs.send(
+          "TU_SERVICE_ID",
+          "template_9r120ke",
+          {
+            email: email,
+            name: nombre + " " + apellido
+          }
+        );
+
+        alert("¡Correo de bienvenida enviado!");
+      } catch (error) {
+        console.error(error);
+        alert("No se pudo enviar el correo.");
+      }
+    });
 </script>
 </body>
 </html>
