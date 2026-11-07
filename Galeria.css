@@ -34,7 +34,6 @@
     color: #333333;
     margin-top: 8px;  
      }
-   }
 /*tablets*/
 @media screen (max-width: 768px) {
       .tabla-imagenes {
@@ -51,7 +50,7 @@
         max-width: 200px;
         height: 150px;
       }
-
+   }
       .tabla-imagenes td, 
       .tabla-imagenes p {
         font-size: 14px;
