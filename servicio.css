@@ -89,7 +89,7 @@
     font-size: 15px;
     line-height: 1.5;
 /*tablets*/
- @media (max-width: 768px){
+ @media screen and (max-width: 768px){
   .contenido {
     padding: 30px 3%;
   }
@@ -109,7 +109,7 @@
   }
 }
 /*celulares*/
-@media (max-width: 480px){
+@media screen and (max-width: 480px){
   .superior {
     padding: 12px 4%;
   }
