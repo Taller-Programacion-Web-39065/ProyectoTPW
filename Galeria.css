@@ -32,5 +32,35 @@
     font-size: 14px;
     font-weight: bold;
     color: #333333;
-    margin-top: 8px;         
+    margin-top: 8px;    
+/*tablets*/
+@media screen and (max-width: 768px){
+  .tabla-imagenes {
+    width: 100%;
+  }
+  .tabla-imagenes tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .tabla-imagenes img {
+    max-width: 200px;
+    height: 150px;
+  }
+  .tabla-imagenes td, .tabla-imagenes p {
+    font-size: 14px;
+}
+/*celulares*/
+@media screen and (max-width: 600px){
+    .tabla-imagenes {
+    width: 100%;
+  }
+  .tabla-imagenes tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .tabla-imagenes img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
