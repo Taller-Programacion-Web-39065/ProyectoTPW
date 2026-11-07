@@ -88,4 +88,10 @@
     color: #555;
     font-size: 15px;
     line-height: 1.5;
+/*tablets*/
+ @media (max-width: 768px){
+}
+/*celulares*/
+@media (max-width: 480px){
+  }
 }
