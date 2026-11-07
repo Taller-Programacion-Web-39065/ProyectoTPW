@@ -90,8 +90,42 @@
     line-height: 1.5;
 /*tablets*/
  @media (max-width: 768px){
+  .contenido {
+    padding: 30px 3%;
+  }
+  .item-servicio {
+    gap: 20px;
+    padding: 15px;
+  }
+  .img-servicio {
+    width: 250px;
+    height: 180px;
+  }
+  .texto-servicio h2 {
+    font-size: 18px;
+  }
+  .texto-servicio p {
+    font-size: 14px;
+  }
 }
 /*celulares*/
 @media (max-width: 480px){
+  .superior {
+    padding: 12px 4%;
+  }
+  .logo-img {
+    width: 100px;
+  }
+  .volver-inicio {
+    font-size: 13px;
+  }
+  .contenido {
+    padding: 25px 4%;
+  }
+  .contenido h1 {
+    font-size: 23px;
+    margin-bottom: 15px;
+  }
+}
   }
 }
