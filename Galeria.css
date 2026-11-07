@@ -4,15 +4,26 @@
     border-radius: 50%;
     object-fit: cover; /*evita que estire la img*/
 }
+.galeria {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .tabla-imagenes {
     width: 100%;             
     max-width: 900px;        
     margin: 30px auto;       
     border-collapse: collapse; 
+    table-layout: fixed;
 }
 
 /* Estilo para cada celda que guarda la foto y el texto */
 .tabla-imagenes td {
+    width: 33.33%;
     padding: 15px;           
     text-align: center;      
     vertical-align: top;     
@@ -34,15 +45,15 @@
     color: #333333;
     margin-top: 8px;  
      }
-@media
-.logo img {
-        width: 65px;
-        height: 65px;
+@media (max-width: 768px) {
+     .Logo img {
+        width: 70px;
+        height: 70px;
     }
 
     .tabla-imagenes {
         width: 100%;
-        margin: 15px auto;
+        margin: 20px auto;
     }
 
     .tabla-imagenes tr {
@@ -52,22 +63,19 @@
     }
 
     .tabla-imagenes td {
-        padding: 10px;
+        display: block;
         width: 100%;
+        padding: 12px;
         box-sizing: border-box;
     }
 
     .tabla-imagenes img {
         width: 100%;
         max-width: 350px;
-        height: auto;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
+        height: 180px;
     }
 
     .tabla-imagenes p {
         font-size: 14px;
-        line-height: 1.5;
-        margin-top: 8px;
     }
-    }
+}
