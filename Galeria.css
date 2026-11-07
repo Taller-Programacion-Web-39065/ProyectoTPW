@@ -36,7 +36,7 @@
      }
    }
 /*tablets*/
-@media (max-width: 768px) {
+@media screen (max-width: 768px) {
       .tabla-imagenes {
         width: 100%;
       }
@@ -57,7 +57,7 @@
         font-size: 14px;
       }
     /*celulares*/
-    @media (max-width: 600px) {
+    @media screen (max-width: 600px) {
       .logo img {
         width: 65px;
         height: 65px;
