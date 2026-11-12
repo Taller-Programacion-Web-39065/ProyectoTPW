@@ -22,17 +22,6 @@
     display: block;
 }
 
-.volver-inicio {
-    color: #ffffff !important;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.volver-inicio:hover {
-    color: #a3d9b1 !important;
-}
-
 /* Estilos de la sección principal */
 .contenido {
     padding: 40px 5%;
