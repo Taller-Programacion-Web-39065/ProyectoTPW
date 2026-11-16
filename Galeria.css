@@ -1,22 +1,14 @@
 .Logo img{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 130px;
+    height: auto;
+    border-radius: 5px;
     object-fit: cover; /*evita que estire la img*/
-}
-.galeria {
-    width: 100%;
-    padding: 20px 30px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .tabla-imagenes {
     width: 100%;             
     max-width: 900px;        
-    margin: 30px auto;       
+    margin: 40px auto;       
     border-collapse: collapse; 
     table-layout: fixed;
 }
@@ -42,14 +34,10 @@
 .tabla-imagenes p {
     font-size: 14px;
     font-weight: bold;
-    color: #333333;
+    color: var(--titulo);
     margin-top: 8px;  
      }
 @media (max-width: 768px) {
-     .Logo img {
-        width: 70px;
-        height: 70px;
-    }
 
     .tabla-imagenes {
         width: 100%;
