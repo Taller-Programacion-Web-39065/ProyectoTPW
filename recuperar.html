@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - Segusa Design</title>
+    <link rel="stylesheet" href="Registrarte.css">
+</head>
+<body>
+    <header class="HeaderA">
+        <a href="index.html" class="Logo">
+            <img src="logo.jpg" alt="Logo Segusa Design">
+        </a>
+    </header>
+
+    <main class="login-container">
+        <form class="login-form" id="recuperarForm">
+            <h2>Recuperar Contraseña</h2>
+            
+            <p style="font-size: 0.9rem; color: #4a5568; text-align: center; line-height: 1.4;">
+                Ingresa tu correo electrónico registrado y te enviaremos un código para restablecer tu clave.
+            </p>
+
+            <div class="input-group">
+                <label for="idEmailRecuperar">Correo Electrónico</label>
+                <input type="email" id="idEmailRecuperar" name="email" placeholder="correo@ejemplo.com" required>
+            </div>
+
+            <button type="submit" class="btn-ingresar" id="btnEnviar">
+                Enviar código
+            </button>
+
+            <div class="rv">
+                <a href="acceso.html">Volver a iniciar sesión</a>
+                <a href="index.html">Volver al inicio</a>
+            </div>
+        </form>
+    </main>
+
+    <!-- Librería de EmailJS -->
+    <script src="https://jsdelivr.net"></script>
+    <script>
+        emailjs.init({
+            publicKey: "TOWhoG3cmnGv3DHRO"
+        });
+
+        document.getElementById("recuperarForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const btn = document.getElementById("btnEnviar");
+            const email = document.getElementById("idEmailRecuperar").value;
+            
+            // Genera un código aleatorio de 6 dígitos
+            const codigoRecuperacion = Math.floor(100000 + Math.random() * 900000);
+
+            btn.textContent = "Enviando...";
+            btn.disabled = true;
+
+            try {
+                // Reemplaza "TU_TEMPLATE_RECUPERAR" con el ID de tu nueva plantilla en EmailJS
+                await emailjs.send(
+                    "service_6iem5ql",
+                    "TU_TEMPLATE_RECUPERAR", 
+                    {
+                        email: email,
+                        codigo: codigoRecuperacion
+                    }
+                );
+
+                alert("¡Listo! Revisa tu bandeja de entrada. Hemos enviado un código de recuperación.");
+                this.reset();
+            } catch (error) {
+                console.error("Error al enviar:", error);
+                alert("Hubo un problema al enviar el correo. Verifica tu conexión o el correo ingresado.");
+            } finally {
+                btn.textContent = "Enviar código";
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

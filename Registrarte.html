@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Segusa Design</title>
+    <link rel="stylesheet" href="Registrarte.css">
+</head>
+<body>
+    <header class="HeaderA">
+        <a href="index.html" class="Logo">
+            <img src="logo.jpg" alt="Logo Segusa Design">
+        </a>
+    </header>
+
+    <main class="login-container">
+       <form class="login-form" id="registroForm">
+            <h2>Crear Cuenta</h2>
+
+            <div class="input-group">
+                <label for="idNombre">Nombre</label>
+                <input type="text" id="idNombre" name="nombre" placeholder="Ingrese su nombre" required>
+            </div>
+
+            <div class="input-group">
+                <label for="idApellido">Apellido</label>
+                <input type="text" id="idApellido" name="apellido" placeholder="Ingrese su apellido" required>
+            </div>
+
+            <div class="input-group">
+                <label for="idEmail">Correo Electrónico</label>
+                <input type="email" id="idEmail" name="correo" placeholder="correo@ejemplo.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="idPassword">Contraseña</label>
+                <input type="password" id="idPassword" name="contraseña" placeholder="Cree una contraseña" required>
+            </div>
+
+            <div class="input-group">
+                <label for="idConfirmPassword">Confirmación de Contraseña</label>
+                <input type="password" id="idConfirmPassword" name="confirmar_contraseña" placeholder="Repita su contraseña" required>
+            </div>
+
+            <button type="submit" class="btn-ingresar">
+                Registrarse
+            </button>
+
+            <div class="rv">
+                <a href="Acceso.html">¿Ya tienes una cuenta? Inicia sesión</a>
+                <a href="index.html">Volver al inicio</a>
+            </div>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
+<script>
+  emailjs.init({
+    publicKey: "TOWhoG3cmnGv3DHRO"
+  });
+
+  document.querySelector(".login-form")
+    .addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("idEmail").value;
+      const nombre = document.getElementById("idNombre").value;
+      const apellido = document.getElementById("idApellido").value;
+
+      try {
+        await emailjs.send(
+          "service_6iem5ql",
+          "template_9r120ke",
+          {
+            email: email,
+            name: nombre + " " + apellido
+          }
+        );
+
+        alert("¡Correo de bienvenida enviado!");
+      } catch (error) {
+        console.error(error);
+        alert("No se pudo enviar el correo.");
+      }
+    });
+</script>
+</body>
+</html>
