@@ -1,6 +1,6 @@
-// ==========================
+
 // MODO OSCURO / CLARO
-// ==========================
+
 const botonTema = document.getElementById("theme-toggle");
 const temaGuardado = localStorage.getItem("tema") || "light";
 
@@ -21,9 +21,9 @@ function actualizarIcono() {
     botonTema.textContent = tema === "dark" ? "Modo Claro" : "Modo Oscuro";
 }
 
-// ==========================
+
 // MENÚ HAMBURGUESA RESPONSIVE
-// ==========================
+
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
     const navMenu = document.querySelector(".nav-menu");
