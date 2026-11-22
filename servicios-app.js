@@ -36,7 +36,7 @@ const SERVICIOS_DATA = [
     alt: "Repostero de cuatro puertas",
     descripcion: "Amplia capacidad de almacenamiento ideal para mantener el orden y la estética de tu hogar.",
     alcance: "Gran volumen de guardado para cocina, comedor o despensa, con puertas alineadas y cierre suave."
-  }
+  },
 
     {
     id: 5,
