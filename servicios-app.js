@@ -37,20 +37,24 @@ const SERVICIOS_DATA = [
     descripcion: "Amplia capacidad de almacenamiento ideal para mantener el orden y la estética de tu hogar.",
     alcance: "Gran volumen de guardado para cocina, comedor o despensa, con puertas alineadas y cierre suave."
   },
-  {
+
+    {
     id: 5,
     titulo: "Repostero de tres Puertas",
     categoria: "Dormitorio",
-    imagen: "imgane20.jpg", // Verifica que coincida con el nombre exacto en GitHub
+    imagen: "imagen20.jpg",
     alt: "Repostero de tres puertas",
     descripcion: "dormitorio ideal para guardar cosas personales.",
     alcance: "adecuado para guardado utencilios de cocina, comedor o despensa, con puertas alineadas y cierre suave."
   }
+  
+  
+  
 ];
 
 function ServiciosApp() {
   const [filtro, setFiltro] = useState("Todos");
-  const [detalleAbiertoId, setDetalleAbiertoId] = useState(null);
+  const [seleccionado, setSeleccionado] = useState(null);
 
   const categorias = ["Todos", "Cocina", "Dormitorio", "Almacenamiento"];
 
@@ -58,10 +62,6 @@ function ServiciosApp() {
     filtro === "Todos"
       ? SERVICIOS_DATA
       : SERVICIOS_DATA.filter((item) => item.categoria === filtro);
-
-  const toggleDetalle = (id) => {
-    setDetalleAbiertoId((prevId) => (prevId === id ? null : id));
-  };
 
   return (
     <section className="servicios-modulo">
@@ -73,10 +73,7 @@ function ServiciosApp() {
             key={cat}
             type="button"
             className={filtro === cat ? "filtro-btn activo" : "filtro-btn"}
-            onClick={() => {
-              setFiltro(cat);
-              setDetalleAbiertoId(null);
-            }}
+            onClick={() => setFiltro(cat)}
           >
             {cat}
           </button>
@@ -84,53 +81,46 @@ function ServiciosApp() {
       </div>
 
       <div className="lista-servicios">
-        {serviciosFiltrados.map((servicio) => {
-          const estaAbierto = detalleAbiertoId === servicio.id;
-
-          return (
-            <div key={servicio.id} className="item-servicio">
-              <div className="columna-imagen">
-                <img
-                  src={servicio.imagen}
-                  alt={servicio.alt}
-                  className="img-servicio"
-                />
-
-                {estaAbierto && (
-                  <div className="servicio-detalle-box">
-                    <h3>{servicio.titulo}</h3>
-                    <p>{servicio.alcance}</p>
-                    <button
-                      type="button"
-                      className="servicio-cerrar"
-                      onClick={() => setDetalleAbiertoId(null)}
-                    >
-                      Cerrar
-                    </button>
-                  </div>
-                )}
-              </div>
-
-              <div className="texto-servicio">
-                <h2>{servicio.titulo}</h2>
-                <p>{servicio.descripcion}</p>
-                <div className="acciones-servicio">
-                  <button
-                    type="button"
-                    className="btn-detalle"
-                    onClick={() => toggleDetalle(servicio.id)}
-                  >
-                    {estaAbierto ? "Ocultar detalles" : "Ver detalles"}
-                  </button>
-                  <a href="Contacto.html" className="btn-cotizar">
-                    Cotizar &rarr;
-                  </a>
-                </div>
+        {serviciosFiltrados.map((servicio) => (
+          <div key={servicio.id} className="item-servicio">
+            <img
+              src={servicio.imagen}
+              alt={servicio.alt}
+              className="img-servicio"
+            />
+            <div className="texto-servicio">
+              <h2>{servicio.titulo}</h2>
+              <p>{servicio.descripcion}</p>
+              <div className="acciones-servicio">
+                <button
+                  type="button"
+                  className="btn-detalle"
+                  onClick={() => setSeleccionado(servicio)}
+                >
+                  Ver detalles
+                </button>
+                <a href="Contacto.html" className="btn-cotizar">
+                  Cotizar &rarr;
+                </a>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
+
+      {seleccionado && (
+        <div className="servicio-detalle-box">
+          <h3>{seleccionado.titulo}</h3>
+          <p>{seleccionado.alcance}</p>
+          <button
+            type="button"
+            className="servicio-cerrar"
+            onClick={() => setSeleccionado(null)}
+          >
+            Cerrar
+          </button>
+        </div>
+      )}
     </section>
   );
 }
