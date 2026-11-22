@@ -37,6 +37,23 @@ const SERVICIOS_DATA = [
     descripcion: "Amplia capacidad de almacenamiento ideal para mantener el orden y la estética de tu hogar.",
     alcance: "Gran volumen de guardado para cocina, comedor o despensa, con puertas alineadas y cierre suave."
   }
+
+    {
+    id: 5,
+    titulo: "Repostero de Cuatro Puertas",
+    categoria: "Dormitorio",
+    imagen: "imagen20.jpg",
+    alt: "Repostero de tres puertas",
+    descripcion: "dormitorio ideal para guardar cosas personales.",
+    alcance: "adecuado para guardado utencilios de cocina, comedor o despensa, con puertas alineadas y cierre suave."
+  }
+  
+  
+  
+
+
+
+  
 ];
 
 function ServiciosApp() {
