@@ -40,7 +40,7 @@ const SERVICIOS_DATA = [
 
     {
     id: 5,
-    titulo: "Repostero de Cuatro Puertas",
+    titulo: "Repostero de tres Puertas",
     categoria: "Dormitorio",
     imagen: "imagen20.jpg",
     alt: "Repostero de tres puertas",
@@ -49,10 +49,6 @@ const SERVICIOS_DATA = [
   }
   
   
-  
-
-
-
   
 ];
 
