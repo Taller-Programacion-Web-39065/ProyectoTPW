@@ -72,14 +72,6 @@
     opacity: 0.8;
 }
 
-.columna-imagen {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-
-
 
 /* =================================
    ADAPTACIÓN A CELULARES Y TABLETS
