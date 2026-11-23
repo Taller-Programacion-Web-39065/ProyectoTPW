@@ -105,9 +105,10 @@ function ServiciosApp() {
               </div>
             </div>
          </div>
-      )}
+     ))}
+        </div>
     </section>
-  </div>
+  
   );
 }
 
