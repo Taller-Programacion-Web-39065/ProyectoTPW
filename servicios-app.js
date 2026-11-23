@@ -92,13 +92,7 @@ function ServiciosApp() {
               <h2>{servicio.titulo}</h2>
               <p>{servicio.descripcion}</p>
               <div className="acciones-servicio">
-                <button
-                  type="button"
-                  className="btn-detalle"
-                  onClick={() => setSeleccionado(servicio)}
-                >
-                  Ver detalles
-                </button>
+               
                 <a href="Contacto.html" className="btn-cotizar">
                   Cotizar &rarr;
                 </a>
