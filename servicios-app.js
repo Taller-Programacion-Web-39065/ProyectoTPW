@@ -107,19 +107,6 @@ function ServiciosApp() {
           </div>
         ))}
       </div>
-
-      {seleccionado && (
-        <div className="servicio-detalle-box">
-          <h3>{seleccionado.titulo}</h3>
-          <p>{seleccionado.alcance}</p>
-          <button
-            type="button"
-            className="servicio-cerrar"
-            onClick={() => setSeleccionado(null)}
-          >
-            Cerrar
-          </button>
-        </div>
       )}
     </section>
   );
